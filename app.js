@@ -1,21 +1,21 @@
 
-let amigos = {};
+let amigos = [];
 
 function agregarAmigo(){  
     const inputAmigo = document.getElementById("amigo")
     const nombreAmigo = inputAmigo.value.trim();
     
-    if (nombreamigo === "") {
+    if (nombreAmigo === "") {
         alert("Por favor, agrega un nombre");
         return;
     }
 
-    amigos.push(nombreamigo);
+    amigos.push(nombreAmigo);
 
     actualizarlista();
 
     inputAmigo.value = "";
-    inputAmigo.focus;
+    inputAmigo.focus();
 }
   
 
@@ -25,8 +25,8 @@ function actualizarlista (){
     listaAmigoUl.innerHTML = "";
 
     amigos.forEach(amigo => {
-        const li =document.createElement (li);
-        li.textcontent = amigo;
+        const li =document.createElement ("li");
+        li.textContent = amigo;
         listaAmigoUl.appendChild(li);
         
     });
